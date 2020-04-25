@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 
 /**
+ * 7 kyu - Number of People in the Bus
+ * 
  * @author Jiayu Zhang
  * @version 2020-04-25
  * 
- * 7 kyu - Number of People in the Bus
  * There is a bus moving in the city, and it takes and drop some people in each bus stop.
  * You are provided with a list (or array) of integer arrays (or tuples). 
  * Each integer array has two items which represent number of people get into bus 
