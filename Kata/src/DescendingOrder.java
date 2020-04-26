@@ -26,6 +26,10 @@ public class DescendingOrder {
 			          .collect(joining())
 			          );
 	}
+	
+	public static void main(String[] args) {
+		System.out.println(sortDesc(45678));
+	}
 }
 
 /**

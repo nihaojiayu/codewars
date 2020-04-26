@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 7 kyu - Number of People in the Bus
@@ -20,6 +21,8 @@ import java.util.ArrayList;
  * is always >= 0. So the return integer can't be negative.
  * The second value in the first integer array is 0, since the bus is empty in the first bus stop.
  *
+ *
+ * .stream().mapToInt --> https://www.geeksforgeeks.org/stream-maptoint-java-examples/
  */
 public class Metro {
 	
@@ -29,15 +32,18 @@ public class Metro {
 		int getOff = 0;
 		int rest = 0;
 		for(int[] e: stops) {
-			getIn = getIn + e[0];
-			getOff = getOff + e[1];
+			getIn += e[0]; //sum up the number of people get into the bus
+			System.out.print("get in: " + getIn + ", ");
+			getOff += e[1]; //sum up the number of people get off from  the bus
+			System.out.println("get off: " + getOff + ", ");
 		}
 		
 		rest = getIn - getOff;
+		System.out.printf("rest = %d getIn: %d - getOff: %d%n", rest, getIn, getOff);
 		return rest;
+
 	}
 	
-	//.stream().mapToInt --> https://www.geeksforgeeks.org/stream-maptoint-java-examples/
 	public static int BetterSolution(ArrayList<int[]> stops) {
 		return stops.stream()
 			    .mapToInt(x -> x[0] - x[1])
@@ -48,11 +54,10 @@ public class Metro {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<int[]> list = new ArrayList<int[]>();
-		  list.add(new int[] {10,0});
-		  list.add(new int[] {3,5});
-		  list.add(new int[] {2,5});
+		  list.add(new int[] {10,0,103});
+		  list.add(new int[] {3,5,102});
+		  list.add(new int[] {2,5,101});
 
-		System.out.println(list.stream().toString());  // How to print the elements in the ArrayList?
 		System.out.println(countPassengers(list));
 		System.out.println(BetterSolution(list));
 	}

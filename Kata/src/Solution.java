@@ -10,7 +10,9 @@ import java.util.ArrayList;
  * 
  * repeatStr(6, "I") // "IIIIII"
  * repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
- *
+ * 
+ * String.repeat(n) -> https://howtodoinjava.com/java11/repeat-string-n-times/
+ * Collection.nCopies -> https://www.geeksforgeeks.org/collections-ncopies-java/
  */
 public class Solution {
 	
@@ -24,13 +26,11 @@ public class Solution {
 		return s.toString();
 	}
 	
-	//String.repeat, Collections.nCopies also work
 	public static String BetterSolution(final int repeat, final String string) {
         return repeat <= 0 ? "" : string.repeat(repeat);
     }
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println(repeatStr(2, "Hello"));
 		System.out.println(repeatStr(0, "Hello"));
 		System.out.println(repeatStr(-10, "Hello"));

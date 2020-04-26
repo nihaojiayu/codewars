@@ -16,6 +16,8 @@
  * GetSum(1, 1) == 1   // 1 Since both are same
  * GetSum(-1, 0) == -1 // -1 + 0 = -1
  * GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+ * 
+ * 	Math abs() --> https://www.geeksforgeeks.org/java-math-abs-method-examples/
  *
  */
 public class Sum {
@@ -34,7 +36,6 @@ public class Sum {
 	     return sum;
 	 }
 	
-	//Math abs() --> https://www.geeksforgeeks.org/java-math-abs-method-examples/
 	public static int BetterSolutionGetSum(int a, int b) {
 	    return (a + b) * (Math.abs(a - b) + 1) / 2;
 	}
