@@ -1,3 +1,4 @@
+package sixKyu;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 

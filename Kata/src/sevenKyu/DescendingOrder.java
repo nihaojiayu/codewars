@@ -1,3 +1,4 @@
+package sevenKyu;
 import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.joining;
 /**

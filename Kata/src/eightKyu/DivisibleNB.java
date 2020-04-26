@@ -1,3 +1,4 @@
+package eightKyu;
 /**
  * 8 kyu - Is n divisible by x and y?
  * @author Jiayu Zhang
