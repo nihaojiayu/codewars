@@ -1,3 +1,4 @@
+
 /**
  * 7 kyu - Beginner Series #3 Sum of Numbers.
  * @author Jiayu Zhang
