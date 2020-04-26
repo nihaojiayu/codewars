@@ -1,6 +1,7 @@
 package sevenKyu;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 7 kyu - Number of People in the Bus
@@ -34,13 +35,13 @@ public class Metro {
 		int rest = 0;
 		for(int[] e: stops) {
 			getIn += e[0]; //sum up the number of people get into the bus
-			System.out.print("get in: " + getIn + ", ");
+			//System.out.print("get in: " + getIn + ", ");
 			getOff += e[1]; //sum up the number of people get off from  the bus
-			System.out.println("get off: " + getOff + ", ");
+			//System.out.println("get off: " + getOff + ", ");
 		}
 		
 		rest = getIn - getOff;
-		System.out.printf("rest = %d getIn: %d - getOff: %d%n", rest, getIn, getOff);
+		//System.out.printf("rest = %d getIn: %d - getOff: %d%n", rest, getIn, getOff);
 		return rest;
 
 	}
@@ -53,12 +54,11 @@ public class Metro {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList<int[]> list = new ArrayList<int[]>();
 		  list.add(new int[] {10,0,103});
 		  list.add(new int[] {3,5,102});
 		  list.add(new int[] {2,5,101});
-
+      
 		System.out.println(countPassengers(list));
 		System.out.println(BetterSolution(list));
 	}
