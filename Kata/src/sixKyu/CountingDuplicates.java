@@ -1,5 +1,7 @@
 package sixKyu;
 
+import java.util.Arrays;
+
 /**
  * 6 kyu - Counting Duplicates
  * @author Jiayu Zhang @version 2020-04-26
@@ -22,15 +24,75 @@ public class CountingDuplicates {
 	public static int duplicateCount(String text) {
 		int count = 0;
 		text = text.toLowerCase();
-		if(text.charAt(0) == text.charAt(1));
-		count++;
+		
+		while(text.length() > 0) {
+			String firstletter = text.substring(0,1);  //get the first letter of text. ex,a
+			text = text.substring(1); //the rest of letters. ex,abbcde
+
+			if(text.contains(firstletter)) //if the rest letters has the first letter, count++
+				 count++;
+
+			text = text.replace(firstletter, ""); //replace the original text. ex, bbcde
+		}
+		
 		return count;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println(duplicateCount("aAbbcde")); //2
-
 	}
 
 }
+
+/*
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.runners.JUnit4;
+
+public class SolutionTest {
+    @Test
+    public void emptyReturnsZero() {
+        assertEquals(0, CountingDuplicates.duplicateCount(""));
+    }
+    
+    @Test
+    public void abcdeReturnsZero() {
+        assertEquals(0, CountingDuplicates.duplicateCount("abcde"));
+    }
+    
+    @Test
+    public void abcdeaaReturnsOne() {
+        assertEquals(1, CountingDuplicates.duplicateCount("abcdeaa"));
+    }
+    
+    @Test
+    public void abcdeaBReturnsTwo() {
+        assertEquals(2, CountingDuplicates.duplicateCount("abcdeaB"));
+    }
+    
+    @Test
+    public void IndivisibilitiesReturnsTwo() {
+        assertEquals(2, CountingDuplicates.duplicateCount("Indivisibilities"));
+    }
+    
+    @Test
+    public void abcdefghijklmnopqrstuvwxyzReturnsZero() {
+        assertEquals(0, CountingDuplicates.duplicateCount("abcdefghijklmnopqrstuvwxyz"));
+    }
+    
+    @Test
+    public void abcdefghijklmnopqrstuvwxyzaaAbReturnsTwo() {
+        assertEquals(2, CountingDuplicates.duplicateCount("abcdefghijklmnopqrstuvwxyzaaAb"));
+    }
+    
+    @Test
+    public void abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzReturnsTwentySix() {
+        assertEquals(26, CountingDuplicates.duplicateCount("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"));
+    }
+    
+    @Test
+    public void abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZReturnsTwentySix() {
+        assertEquals(26, CountingDuplicates.duplicateCount("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+    }
+}
+*/
