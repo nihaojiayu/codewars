@@ -1,7 +1,5 @@
 package sixKyu;
 
-import java.util.Arrays;
-
 /**
  * 6 kyu - Counting Duplicates
  * @author Jiayu Zhang @version 2020-04-26
