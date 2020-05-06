@@ -29,7 +29,7 @@ public class YourOrderPlease {
 			for(String e : arr) {
 				if(e.contains(String.valueOf(i))) {
 					result.append(e + " ");
-					//System.out.println(": " + result);
+					System.out.println(": " + result);
 				}
 			}
 		}
